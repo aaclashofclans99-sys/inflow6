@@ -31,6 +31,14 @@
     animation: float 6s ease-in-out infinite;
   }
   
+  .animate-scroll {
+    animation: scroll 30s linear infinite;
+  }
+  
+  .pause-animation:hover {
+    /* Removed pause on hover functionality */
+  }
+  
   .hover-lift {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
@@ -38,6 +46,15 @@
   .hover-lift:hover {
     transform: translateY(-4px);
     box-shadow: 0 20px 40px rgba(255, 77, 166, 0.15);
+  }
+  
+  .carousel-track {
+    display: flex;
+    width: max-content;
+  }
+  
+  .animate-scroll {
+    animation: scroll 40s linear infinite;
   }
 }
 
@@ -81,6 +98,15 @@
   }
   50% {
     transform: translateY(-20px);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }
 
