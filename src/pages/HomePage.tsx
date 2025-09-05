@@ -215,6 +215,23 @@ export default function HomePage({ onNavigate, onScrollToVideo }: HomePageProps)
         <h2 className="text-center text-black text-2xl font-semibold mb-6">Integrate with your favorite tools</h2>
         <div className="carousel-wrapper relative w-full overflow-hidden">
           <div className="carousel-track flex gap-12 animate-scroll">
+            {/* Logo images start */}
+            <img src="/logo carousel integrations/facebook.png" alt="Facebook" className="h-10 object-contain" />
+            <img src="/logo carousel integrations/google.png" alt="Google" className="h-10 object-contain" />
+            <img src="/logo carousel integrations/linkedin.png" alt="LinkedIn" className="h-10 object-contain" />
+            <img src="/logo carousel integrations/slack.png" alt="Slack" className="h-10 object-contain" />
+            <img src="/logo carousel integrations/instagram.png" alt="Instagram" className="h-10 object-contain" />
+            <img src="/logo carousel integrations/printful.png" alt="Printful" className="h-10 object-contain" />
+            <img src="/logo carousel integrations/xero.png" alt="Xero" className="h-10 object-contain" />
+            <img src="/logo carousel integrations/zapier.png" alt="Zapier" className="h-10 object-contain" />
+            <img src="/logo carousel integrations/whatsapp.png" alt="WhatsApp" className="h-10 object-contain" />
+            <img src="/logo carousel integrations/stripe.png" alt="Stripe" className="h-10 object-contain" />
+            <img src="/logo carousel integrations/tiktok.png" alt="TikTok" className="h-10 object-contain" />
+            <img src="/logo carousel integrations/shopify.png" alt="Shopify" className="h-10 object-contain" />
+            <img src="/logo carousel integrations/quickbooks.png" alt="QuickBooks" className="h-10 object-contain" />
+            <img src="/logo carousel integrations/clio.png" alt="Clio" className="h-10 object-contain" />
+            <img src="/logo carousel integrations/shippo.png" alt="Shippo" className="h-10 object-contain" />
+            {/* Duplicate logos for seamless loop */}
             <img src="/logo carousel integrations/facebook.png" alt="Facebook" className="h-10 object-contain" />
             <img src="/logo carousel integrations/google.png" alt="Google" className="h-10 object-contain" />
             <img src="/logo carousel integrations/linkedin.png" alt="LinkedIn" className="h-10 object-contain" />
