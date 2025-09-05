@@ -1,6 +1,6 @@
 import React from 'react';
 import AnimatedBackground from '../components/AnimatedBackground';
-import { Play, Users, Zap, Calendar, BarChart3, CheckCircle, Star } from 'lucide-react';
+import { Play, Users, Zap, Calendar, BarChart3, CheckCircle, Star, Sparkles } from 'lucide-react';
 
 interface HomePageProps {
   onNavigate?: (page: string) => void;
@@ -10,22 +10,22 @@ interface HomePageProps {
 export default function HomePage({ onNavigate, onScrollToVideo }: HomePageProps) {
   const features = [
     {
-      icon: <Users className="w-8 h-8" />,
+      icon: <Users className="w-6 h-6" />,
       title: 'Centralized Client Management Hub',
       description: 'Keep all your client information, interactions, and history in one organized place.'
     },
     {
-      icon: <Zap className="w-8 h-8" />,
+      icon: <Zap className="w-6 h-6" />,
       title: 'Automated Workflows & Follow-ups',
       description: 'Set up smart automation to handle routine tasks and never miss important follow-ups.'
     },
     {
-      icon: <Calendar className="w-8 h-8" />,
+      icon: <Calendar className="w-6 h-6" />,
       title: 'Built-in Booking & Scheduling',
       description: 'Let clients book appointments directly with integrated calendar management.'
     },
     {
-      icon: <BarChart3 className="w-8 h-8" />,
+      icon: <BarChart3 className="w-6 h-6" />,
       title: 'Data Insights for Smarter Decisions',
       description: 'Get actionable insights from your business data to make informed strategic decisions.'
     }
@@ -61,11 +61,29 @@ export default function HomePage({ onNavigate, onScrollToVideo }: HomePageProps)
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 bg-gradient-to-br from-primary-50 via-white to-secondary-50">
-        <AnimatedBackground />
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 bg-gradient-to-br from-pink-50 via-white to-purple-50">
+        {/* Premium Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          {/* Main gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-pink-100/30 via-transparent to-purple-100/30"></div>
+          
+          {/* Floating gradient shapes */}
+          <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-r from-pink-400/20 to-purple-400/20 rounded-full mix-blend-multiply filter blur-3xl animate-float opacity-70"></div>
+          <div className="absolute top-40 right-10 w-80 h-80 bg-gradient-to-r from-purple-400/20 to-cyan-400/20 rounded-full mix-blend-multiply filter blur-3xl animate-float opacity-70" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute -bottom-32 left-20 w-72 h-72 bg-gradient-to-r from-cyan-400/15 to-pink-400/15 rounded-full mix-blend-multiply filter blur-3xl animate-float opacity-60" style={{ animationDelay: '4s' }}></div>
+          
+          {/* Subtle grid pattern */}
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23FF4DA6%22%20fill-opacity%3D%220.02%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%221%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
+        </div>
         
         <div className="relative z-10 container mx-auto px-6 text-center animate-fade-in">
           <div className="max-w-4xl mx-auto">
+            {/* Premium badge */}
+            <div className="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm border border-pink-200/50 rounded-full px-4 py-2 mb-8 shadow-lg">
+              <Sparkles className="w-4 h-4 text-pink-500" />
+              <span className="text-sm font-semibold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">Premium CRM Platform</span>
+            </div>
+            
             <h1 className="text-5xl md:text-7xl font-black mb-6 text-gray-900 leading-tight tracking-tight">
              Elevate Your Sales With The All-in-One CRM Platform
             </h1>       
@@ -78,28 +96,28 @@ export default function HomePage({ onNavigate, onScrollToVideo }: HomePageProps)
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <button 
                 onClick={() => onNavigate?.('pricing')}
-                className="group bg-gradient-to-r from-primary-500 to-secondary-500 hover:from-primary-600 hover:to-secondary-600 text-white px-10 py-4 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
+                className="group bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-10 py-4 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-pink-500/25"
               >
                 Get Started
               </button>
               
               <button 
                 onClick={onScrollToVideo}
-                className="flex items-center space-x-2 bg-white/80 backdrop-blur-sm hover:bg-white text-gray-900 px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 border border-gray-200 hover:border-primary-300 hover-lift"
+                className="flex items-center space-x-2 bg-white/80 backdrop-blur-sm hover:bg-gradient-to-r hover:from-pink-500 hover:to-purple-600 text-gray-900 hover:text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 border border-pink-200/50 hover:border-transparent hover-lift"
               >
-                <Play className="w-5 h-5 text-primary-600" />
+                <Play className="w-5 h-5 text-pink-600 group-hover:text-white transition-colors" />
                 <span>See Demo</span>
               </button>
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
               {stats.map((stat, index) => (
-                <div key={index} className="text-center animate-slide-up" style={{ animationDelay: `${index * 0.2}s` }}>
-                  <div className="text-3xl md:text-4xl font-black text-gradient mb-2">
+                <div key={index} className="text-center animate-slide-up bg-white/60 backdrop-blur-sm rounded-2xl p-4 border border-white/50 shadow-lg" style={{ animationDelay: `${index * 0.2}s` }}>
+                  <div className="text-3xl md:text-4xl font-black bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent mb-2">
                     {stat.value}
                   </div>
-                  <div className="text-gray-600 text-sm md:text-base font-medium">{stat.label}</div>
+                  <div className="text-gray-700 text-sm md:text-base font-semibold">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -108,7 +126,7 @@ export default function HomePage({ onNavigate, onScrollToVideo }: HomePageProps)
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black mb-6 text-gray-900">
@@ -123,13 +141,13 @@ export default function HomePage({ onNavigate, onScrollToVideo }: HomePageProps)
             {features.map((feature, index) => (
               <div 
                 key={index}
-                className="bg-white rounded-3xl p-8 border border-gray-200 hover:border-primary-300 transition-all duration-300 hover-lift shadow-lg hover:shadow-xl"
+                className="bg-white rounded-2xl p-8 border border-gray-100 hover:border-pink-200 transition-all duration-300 hover-lift shadow-sm hover:shadow-lg group"
               >
-                <div className="text-primary-600 mb-6">
+                <div className="text-pink-500 mb-6 group-hover:scale-110 transition-transform duration-300">
                   {feature.icon}
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{feature.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                <p className="text-gray-600 leading-relaxed text-base">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -149,10 +167,10 @@ export default function HomePage({ onNavigate, onScrollToVideo }: HomePageProps)
           </div>
 
           <div className="max-w-6xl mx-auto">
-            <div className="relative aspect-video bg-gray-100 rounded-3xl border border-gray-200 overflow-hidden shadow-2xl">
-              <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-primary-50/50 to-secondary-50/50">
+            <div className="relative aspect-video bg-gray-50 rounded-2xl border border-gray-200 overflow-hidden shadow-xl">
+              <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-pink-50/50 to-purple-50/50">
                 <div className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center mb-4 mx-auto hover-lift cursor-pointer">
+                  <div className="w-20 h-20 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center mb-4 mx-auto hover-lift cursor-pointer shadow-lg hover:shadow-pink-500/25 transition-all duration-300">
                     <Play className="w-8 h-8 text-white ml-1" />
                   </div>
                   <p className="text-gray-700 text-lg font-semibold">Demo Video Coming Soon</p>
@@ -165,7 +183,7 @@ export default function HomePage({ onNavigate, onScrollToVideo }: HomePageProps)
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black mb-6 text-gray-900">
@@ -180,17 +198,17 @@ export default function HomePage({ onNavigate, onScrollToVideo }: HomePageProps)
             {testimonials.map((testimonial, index) => (
               <div 
                 key={index}
-                className="bg-white rounded-3xl p-8 border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 hover-lift"
+                className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 hover-lift group"
               >
-                <div className="flex mb-4">
+                <div className="flex mb-6">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-gray-700 mb-6 italic font-medium">"{testimonial.text}"</p>
+                <p className="text-gray-700 mb-6 italic font-medium text-base leading-relaxed">"{testimonial.text}"</p>
                 <div>
                   <p className="text-gray-900 font-bold">{testimonial.name}</p>
-                  <p className="text-primary-600 text-sm font-medium">{testimonial.company}</p>
+                  <p className="text-pink-600 text-sm font-medium">{testimonial.company}</p>
                 </div>
               </div>
             ))}
@@ -199,9 +217,15 @@ export default function HomePage({ onNavigate, onScrollToVideo }: HomePageProps)
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-primary-50 via-white to-secondary-50">
+      <section className="py-20 bg-gradient-to-br from-pink-50 via-white to-purple-50 relative overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute inset-0">
+          <div className="absolute top-10 right-10 w-64 h-64 bg-gradient-to-r from-pink-400/10 to-purple-400/10 rounded-full filter blur-3xl"></div>
+          <div className="absolute bottom-10 left-10 w-64 h-64 bg-gradient-to-r from-purple-400/10 to-cyan-400/10 rounded-full filter blur-3xl"></div>
+        </div>
+        
         <div className="container mx-auto px-6 text-center">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-3xl mx-auto relative z-10">
             <h2 className="text-4xl md:text-5xl font-black mb-6 text-gray-900">
               Ready to Transform Your Business?
             </h2>
@@ -210,7 +234,7 @@ export default function HomePage({ onNavigate, onScrollToVideo }: HomePageProps)
             </p>
             <button 
               onClick={() => onNavigate?.('pricing')}
-              className="bg-gradient-to-r from-primary-500 to-secondary-500 hover:from-primary-600 hover:to-secondary-600 text-white px-12 py-5 rounded-2xl font-bold text-xl transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-3xl"
+              className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-12 py-5 rounded-2xl font-bold text-xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-pink-500/25"
             >
               Start Your 7-Day Free Trial
             </button>
