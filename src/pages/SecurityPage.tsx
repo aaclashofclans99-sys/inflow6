@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, Lock, Server, Eye, CheckCircle2, Sparkles } from 'lucide-react';
+import { Shield, Lock, Server, Eye, CheckCircle2, AlertTriangle, Sparkles } from 'lucide-react';
 
 export default function SecurityPage() {
   const securityFeatures = [
@@ -27,6 +27,11 @@ export default function SecurityPage() {
       icon: <CheckCircle2 className="w-8 h-8" />,
       title: 'Best Practices',
       description: 'Our infrastructure is powered by trusted providers and adheres to industry compliance standards.'
+    },
+    {
+      icon: <AlertTriangle className="w-8 h-8" />,
+      title: 'Threat Detection',
+      description: 'Proactively detects and mitigates potential security threats in real time.'
     }
   ];
 
