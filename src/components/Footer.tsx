@@ -37,7 +37,7 @@ export default function Footer({ onNavigate }: FooterProps) {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <div className="relative h-8 w-[120px]">
-                <div className="h-full w-full bg-gradient-to-r from-[#FF4DA6] to-[#7C3AED]"
+                <div className="h-full w-full bg-gradient-to-r from-primary-500 to-secondary-500"
                   style={{
                     WebkitMaskImage: "url('/dffdf.png')",
                     maskImage: "url('/dffdf.png')",
