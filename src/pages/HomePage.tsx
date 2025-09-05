@@ -47,7 +47,7 @@ export default function HomePage({ onNavigate, onScrollToVideo }: HomePageProps)
     {
       name: 'Simone Brooks',
       company: 'Real Estate Agent',
-      text: 'Having all my client info in one place makes my day so much easier. Honestly, it's a game changer.',
+      text: 'Having all my client info in one place makes my day so much easier. Honestly, it\'s a game changer.',
       rating: 5
     },
     {
