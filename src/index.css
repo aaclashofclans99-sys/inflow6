@@ -36,7 +36,7 @@
   }
   
   .pause-animation:hover {
-    /* Removed pause on hover functionality */
+    animation-play-state: paused;
   }
   
   .hover-lift {
@@ -46,15 +46,6 @@
   .hover-lift:hover {
     transform: translateY(-4px);
     box-shadow: 0 20px 40px rgba(255, 77, 166, 0.15);
-  }
-  
-  .carousel-track {
-    display: flex;
-    width: max-content;
-  }
-  
-  .animate-scroll {
-    animation: scroll 40s linear infinite;
   }
 }
 
