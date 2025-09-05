@@ -212,7 +212,7 @@ export default function HomePage({ onNavigate, onScrollToVideo }: HomePageProps)
 
       {/* Integrations Section */}
       <section className="logo-carousel w-full bg-white py-12 overflow-hidden">
-        <h2 className="text-4xl md:text-5xl font-black mb-12 text-center text-gray-900">Integrate with your favorite tools</h2>
+        <h2 className="text-2xl md:text-5xl font-black mb-12 text-center text-gray-900">Integrate with your favorite tools</h2>
         <div className="carousel-wrapper relative w-full overflow-hidden">
           <div className="carousel-track flex gap-16 md:gap-24 animate-scroll">
             {/* Logo images start */}
