@@ -91,21 +91,40 @@
 }
 
 @layer utilities {
-  .carousel-track {
-    display: flex;
-    width: max-content;
+  .animate-scroll {
+    animation: scroll 40s linear infinite;
   }
 
-  @keyframes scroll {
+  /* Logo Carousel Infinite Loop */
+  .logo-carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .logo-carousel .carousel-wrapper {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+  }
+
+  .logo-carousel .carousel-track {
+    display: flex;
+    animation: scroll-left 40s linear infinite;
+  }
+
+  .logo-carousel .carousel-track img {
+    height: 40px;
+    margin: 0 30px;
+    flex-shrink: 0;
+  }
+
+  @keyframes scroll-left {
     0% {
       transform: translateX(0);
     }
     100% {
       transform: translateX(-50%);
     }
-  }
-
-  .animate-scroll {
-    animation: scroll 40s linear infinite;
   }
 }
