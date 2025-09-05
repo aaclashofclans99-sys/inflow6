@@ -51,7 +51,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                 <img src="/dffdf.png" alt="Inflow Logo" className="h-full w-auto opacity-0" />
               </div>
             </div>
-            <div className="space-y-2">
+            <div className="space-y-2 pl-10">
               <p className="text-gray-600 text-sm">Email:</p>
               <a 
                 href="mailto:info@inflow.com" 
