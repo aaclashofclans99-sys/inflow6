@@ -9,5 +9,34 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      (() => {
+        const wrapper = document.querySelector('.logo-carousel .carousel-wrapper');
+        if (!wrapper) return;
+        const track = wrapper.querySelector('.carousel-track');
+        if (!track) return;
+
+        // Duplicate the row once for a seamless loop (do this only once)
+        if (!track.dataset.duplicated) {
+          track.innerHTML += track.innerHTML;
+          track.dataset.duplicated = 'true';
+        }
+
+        // Measure half of the full track (one set width) and use it as the loop distance
+        const setDistance = () => {
+          // After duplication, half of the scrollWidth equals one complete logo set
+          const distance = track.scrollWidth / 2;
+          track.style.setProperty('--loop-distance', `${distance}px`);
+        };
+
+        // Run after images load (important for correct width)
+        if (document.readyState === 'complete') {
+          setDistance();
+        } else {
+          window.addEventListener('load', setDistance);
+        }
+        window.addEventListener('resize', setDistance);
+      })();
+    </script>
   </body>
 </html>

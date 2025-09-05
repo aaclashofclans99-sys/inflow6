@@ -109,3 +109,37 @@
     animation: scroll 40s linear infinite;
   }
 }
+
+/* Logo belt: force single row + smooth infinite loop */
+.logo-carousel .carousel-wrapper { 
+  overflow: hidden; 
+}
+
+.logo-carousel .carousel-track {
+  display: flex;
+  flex-wrap: nowrap;       /* never wrap to a new line */
+  will-change: transform;
+}
+
+@keyframes logo-marquee {
+  from { transform: translate3d(0,0,0); }
+  to   { transform: translate3d(calc(var(--loop-distance) * -1), 0, 0); }
+}
+
+/* The track already has .animate-scroll in your markup */
+.logo-carousel .animate-scroll {
+  animation: logo-marquee var(--loop-duration, 40s) linear infinite;
+  pointer-events: none;    /* avoid hover-induced pauses from any global styles */
+}
+
+/* Keep each logo from shrinking */
+.logo-carousel .carousel-track img { 
+  flex: 0 0 auto; 
+}
+
+/* Optional: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .logo-carousel .animate-scroll { 
+    animation-duration: 120s; 
+  }
+}
