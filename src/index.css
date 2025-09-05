@@ -36,7 +36,7 @@
   }
   
   .pause-animation:hover {
-    animation-play-state: paused;
+    /* Removed pause on hover functionality */
   }
   
   .hover-lift {
