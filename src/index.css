@@ -94,6 +94,8 @@
   .carousel-track {
     display: flex;
     width: max-content;
+    flex-wrap: nowrap;
+    will-change: transform;
   }
 
   @keyframes scroll {
@@ -106,6 +108,10 @@
   }
 
   .animate-scroll {
-    animation: scroll 40s linear infinite;
+    animation: scroll 45s linear infinite;
+  }
+  
+  .animate-scroll:hover {
+    animation-play-state: running;
   }
 }
