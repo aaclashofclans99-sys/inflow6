@@ -99,7 +99,7 @@ export default function Footer({ onNavigate }: FooterProps) {
             <h3 className="text-gray-900 font-semibold mb-4">Support</h3>
             <button
               onClick={handleContactSupport}
-              className="bg-gradient-to-r from-primary-500 to-secondary-500 hover:from-primary-600 hover:to-secondary-600 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 text-sm hover-lift"
+              className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 text-sm hover-lift shadow-lg hover:shadow-pink-500/25"
             >
               Contact Support
             </button>
