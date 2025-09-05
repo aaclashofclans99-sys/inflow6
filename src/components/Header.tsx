@@ -47,7 +47,7 @@ export default function Header({ currentPage = 'home', onNavigate }: HeaderProps
               onClick={() => handleNavigation('home')}
             >
               <div className="relative h-14 w-[160px] pl-4">
-                <div className="h-full w-full bg-gradient-to-r from-[#FF4DA6] to-[#7C3AED]"
+                <div className="h-full w-full bg-gradient-to-r from-primary-500 to-secondary-500"
                   style={{
                     WebkitMaskImage: "url('/dffdf.png')",
                     maskImage: "url('/dffdf.png')",
