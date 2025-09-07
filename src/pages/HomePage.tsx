@@ -214,7 +214,7 @@ export default function HomePage({ onNavigate, onScrollToVideo }: HomePageProps)
       <section className="logo-carousel-section w-full bg-white py-12 overflow-hidden">
         <h2 className="text-4xl md:text-5xl font-black mb-12 text-center text-gray-900">Integrate with your favorite tools</h2>
         <div className="marquee-wrapper overflow-hidden relative w-full">
-          <div className="marquee-track flex items-center gap-12 animate-marquee-scroll">
+          <div className="marquee-track flex items-center gap-20 animate-marquee-scroll">
             {/* Full sequence (set A) */}
             <img src="/logo carousel integrations/facebook.png" alt="Facebook" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
             <img src="/logo carousel integrations/google.png" alt="Google" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
