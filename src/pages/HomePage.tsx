@@ -220,6 +220,7 @@ export default function HomePage({ onNavigate, onScrollToVideo }: HomePageProps)
             <img src="/logo carousel integrations/google.png" alt="Google" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
             <img src="/logo carousel integrations/linkedin.png" alt="LinkedIn" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
             <img src="/logo carousel integrations/slack.png" alt="Slack" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
+            <img src="/logo carousel integrations/shippo.png" alt="Shippo" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
             <img src="/logo carousel integrations/instagram.png" alt="Instagram" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
             <img src="/logo carousel integrations/printful.png" alt="Printful" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
             <img src="/logo carousel integrations/xero.png" alt="Xero" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
@@ -230,13 +231,13 @@ export default function HomePage({ onNavigate, onScrollToVideo }: HomePageProps)
             <img src="/logo carousel integrations/shopify.png" alt="Shopify" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
             <img src="/logo carousel integrations/quickbooks.png" alt="QuickBooks" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
             <img src="/logo carousel integrations/clio.png" alt="Clio" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
-            <img src="/logo carousel integrations/shippo.png" alt="Shippo" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
             
             {/* Duplicate sequence (set A copy) for seamless loop */}
             <img src="/logo carousel integrations/facebook.png" alt="Facebook" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
             <img src="/logo carousel integrations/google.png" alt="Google" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
             <img src="/logo carousel integrations/linkedin.png" alt="LinkedIn" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
             <img src="/logo carousel integrations/slack.png" alt="Slack" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
+            <img src="/logo carousel integrations/shippo.png" alt="Shippo" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
             <img src="/logo carousel integrations/instagram.png" alt="Instagram" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
             <img src="/logo carousel integrations/printful.png" alt="Printful" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
             <img src="/logo carousel integrations/xero.png" alt="Xero" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
@@ -247,7 +248,6 @@ export default function HomePage({ onNavigate, onScrollToVideo }: HomePageProps)
             <img src="/logo carousel integrations/shopify.png" alt="Shopify" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
             <img src="/logo carousel integrations/quickbooks.png" alt="QuickBooks" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
             <img src="/logo carousel integrations/clio.png" alt="Clio" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
-            <img src="/logo carousel integrations/shippo.png" alt="Shippo" className="h-12 md:h-16 object-contain flex-shrink-0" loading="eager" decoding="sync" />
           </div>
         </div>
       </section>
