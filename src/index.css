@@ -94,7 +94,7 @@
   .marquee-track {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 4rem;
     width: max-content;
     flex-wrap: nowrap;
     will-change: transform;
@@ -122,13 +122,13 @@
   /* Responsive adjustments */
   @media (max-width: 768px) {
     .marquee-track {
-      gap: 1.5rem;
+      gap: 3rem;
     }
   }
 
   @media (max-width: 640px) {
     .marquee-track {
-      gap: 1rem;
+      gap: 2rem;
     }
   }
 }
