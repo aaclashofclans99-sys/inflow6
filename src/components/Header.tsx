@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X, ArrowRight } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
-import AuthModal from './AuthModal';
 
 interface HeaderProps {
   currentPage?: string;
@@ -10,7 +9,6 @@ interface HeaderProps {
 
 export default function Header({ currentPage = 'home', onNavigate }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
   const { user, signOut } = useAuth();
 
   const navItems = [
@@ -32,7 +30,9 @@ export default function Header({ currentPage = 'home', onNavigate }: HeaderProps
     if (user) {
       signOut();
     } else {
-      setIsAuthModalOpen(true);
+      if (onNavigate) {
+        onNavigate('auth');
+      }
     }
   };
 
@@ -123,11 +123,6 @@ export default function Header({ currentPage = 'home', onNavigate }: HeaderProps
           )}
         </nav>
       </header>
-
-      <AuthModal 
-        isOpen={isAuthModalOpen} 
-        onClose={() => setIsAuthModalOpen(false)} 
-      />
     </>
   );
 }

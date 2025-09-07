@@ -11,6 +11,7 @@ import SecurityPage from './pages/SecurityPage';
 import ContactPage from './pages/ContactPage';
 import FeaturesPage from './pages/FeaturesPage';
 import FAQPage from './pages/FAQPage';
+import AuthPage from './pages/AuthPage';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -45,6 +46,8 @@ function App() {
         return <TermsPage />;
       case 'security':
         return <SecurityPage />;
+      case 'auth':
+        return <AuthPage onNavigate={handleNavigation} />;
       default:
         return <HomePage onNavigate={handleNavigation} onScrollToVideo={handleScrollToVideo} />;
     }
